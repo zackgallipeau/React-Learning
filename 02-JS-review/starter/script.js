@@ -173,6 +173,64 @@ console.log(other);
 const newGenres = [...genres, "epic fantasy"];
 console.log(newGenres);
 
-const updatedBook = { book, moviePublicationDate: "2001-12-19" };
+console.log(book.pages);
 
+const updatedBook = {
+  ...book,
+  moviePublicationDate: "2001-12-19",
+  pages: 1210,
+};
+/*
 console.log(updatedBook.moviePublicationDate);
+
+console.log(updatedBook.pages);
+console.log(updatedBook);
+
+const books = getBooks();
+
+console.log(books);
+
+const double = [1, 2, 3, 4, 5].map((num) => num * 2);
+console.log(double);
+
+const bookData = books.map((book) => ({
+  title: book.title,
+  author: book.author,
+}));
+
+console.log(...bookData);
+
+const longBooks = books.filter((book) => book.pages > 500);
+
+console.log(...longBooks);
+
+const pagesAllBooks = books.reduce((acc, book) => (acc += book.pages), 0);
+console.log(pagesAllBooks);
+
+// 1. Add a book object to an array
+
+const newBook = {
+  id: 6,
+  title: "Harry Potter and the Chamber of Secrets",
+  author: "J. K. Rowling",
+};
+
+const booksAfterAdd = [...books, newBook];
+console.log(...booksAfterAdd);
+
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id != 3);
+
+console.log(...booksAfterDelete);
+
+const booksAfterUpdate = booksAfterDelete.map((book) =>
+  book.id === 1 ? { ...book, pages: 1 } : book
+);
+
+console.log(...booksAfterUpdate);
+*/
+
+const hi = fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) =>
+  res.json().then((data) => console.log(data))
+);
+
+console.log("well hello there");
