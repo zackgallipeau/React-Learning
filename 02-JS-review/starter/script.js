@@ -234,3 +234,11 @@ const hi = fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) =>
 );
 
 console.log("well hello there");
+
+async function getTodos() {
+  const data = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  return data;
+}
+
+console.log(data);
+console.log("ya like jazz?");
