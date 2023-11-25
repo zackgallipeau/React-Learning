@@ -92,8 +92,19 @@ h3 {
   cursor: pointer;
   font-size: 40px;
   color: inherit;
+  transition: 1s;
 }
 
 .close:hover {
   color: #7950f2;
+}
+
+.rotate {
+  transform: rotate(405deg);
+  transition: 1s;
+  color: #7950f2;
+}
+
+.rotate:hover {
+  color: #333;
 }
