@@ -6,21 +6,21 @@ const messages = [
   "Invest your new income 🤑",
 ];
 
-export default function App() {
+export default function Steps() {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
   const [isRotated, setIsRotated] = useState("close");
 
   function handlePrevious() {
-    step > 1 && setStep(step - 1);
+    step > 1 && setStep((cur) => cur - 1);
   }
 
   function handleNext() {
-    step < 3 && setStep(step + 1);
+    step < 3 && setStep((cur) => cur + 1);
   }
 
   function handleClose() {
-    setIsOpen(!isOpen);
+    setIsOpen((is) => !is);
 
     if (isRotated === "close") {
       setIsRotated("close rotate");
